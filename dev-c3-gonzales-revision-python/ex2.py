@@ -5,3 +5,6 @@ def handlingSentence(sentence):
         'length': len(sentence.split(' '))
     }
 
+userSentence = input('Entrez une phrase: ')
+print(handlingSentence(userSentence))
+
