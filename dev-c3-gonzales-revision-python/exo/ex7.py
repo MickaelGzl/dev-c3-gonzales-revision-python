@@ -17,13 +17,15 @@ students = {}
 def enterValidNote(value):
     if not re.match(r'^[0-9.]+$', value):
         print("Valeur invalide pour une node d'étudiant")
-        enterValidNote(input('Entrez sa note: '))
+        value = input('Entrez sa note: ')
+        enterValidNote(value)
     return value
 
 def enterValidName(value):
     if value in students:
         print("Cet étudiant à déjà été renseigné.")
-        enterValidName(input("Entrez le nom de l'étudiant: "))
+        value = input("Entrez le nom de l'étudiant: ")
+        enterValidName(value)
     return value
 
     
@@ -31,6 +33,8 @@ def enterValidName(value):
 while True:
     studentName = enterValidName(input("Entrez le nom de l'étudiant: "))
     studentNote = enterValidNote(input('Entrez sa note: '))
+
+    print(studentName, studentNote)
 
     students[studentName] = studentNote
     addAnotherEntry = input("Ajouter un autre étudiant (y/n): ")
