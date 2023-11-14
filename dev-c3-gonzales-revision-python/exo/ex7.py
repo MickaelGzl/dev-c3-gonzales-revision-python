@@ -5,6 +5,7 @@ def findStudentWithBestNote(students):
     bestNote = 0
     bestStudents = []
     for key, value in students.items():
+        value = float(value)
         if value > bestNote:
             bestStudents = [key]
             bestNote = value
@@ -42,4 +43,4 @@ while True:
         break
     
 
-print(students)
+print(findStudentWithBestNote(students))
