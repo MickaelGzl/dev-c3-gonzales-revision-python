@@ -65,7 +65,7 @@ def evalUserInput(input):
 
         return operations[0]
     except ValueError as e:
-        print(e)
+        return e
 
 userInput = input('Entrer une opération: ')
 print(evalUserInput(userInput))
