@@ -19,10 +19,17 @@ def enterValidNote(value):
         print("Valeur invalide pour une node d'étudiant")
         enterValidNote(input('Entrez sa note: '))
     return value
+
+def enterValidName(value):
+    if value in students:
+        print("Cet étudiant à déjà été renseigné.")
+        enterValidName(input("Entrez le nom de l'étudiant: "))
+    return value
+
     
 
 while True:
-    studentName = input("Entrez le nom de l'étudiant: ")
+    studentName = enterValidName(input("Entrez le nom de l'étudiant: "))
     studentNote = enterValidNote(input('Entrez sa note: '))
 
     students[studentName] = studentNote
