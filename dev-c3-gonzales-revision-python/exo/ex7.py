@@ -16,7 +16,7 @@ def findStudentWithBestNote(students):
 students = {}
 
 def enterValidNote(value):
-    if not re.match(r'^[0-9.]+$', value):
+    if not re.match(r'^\d+(\.\d{0,1})?$', value):
         print("Valeur invalide pour une node d'étudiant")
         value = input('Entrez sa note: ')
         enterValidNote(value)
